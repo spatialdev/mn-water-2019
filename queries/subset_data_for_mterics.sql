@@ -157,3 +157,4 @@ SELECT
          THEN ST_Area(wkb_geometry::geography) ELSE NULL END as area
 FROM mn_2019_upload.multipolygons
 ;
+

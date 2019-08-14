@@ -1,5 +1,6 @@
 /*
-These queries create tables from 2009, 2011, and 2019 linear and multipolygon data as a base for a larger metrics query.
+These queries create tables from 2009, 2011, and 2019 
+linear and multipolygon data as a base for a larger metrics query.
 */
 
 /*

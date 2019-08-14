@@ -4,7 +4,7 @@ This query identifies OSM linear features that have not changed between two time
 - The geometry should be identical
 */
 
-CREATE TABLE results_diff_geo.linear_no_change AS
+CREATE TABLE results_final.linear_no_change AS
 SELECT
 	t_1.osm_id as osm_id_t1,
 	t_2.osm_id as osm_id_t2,
@@ -22,10 +22,11 @@ WHERE
 	ST_Equals(t_1.wkb_geometry, t_2.wkb_geometry)
 ;
 
-CREATE TABLE results_diff_geo.linear_no_change_nhd AS
+CREATE TABLE results_final.linear_no_change_nhd AS
 SELECT
 	*
-FROM results_diff_geo.linear_no_change_all
+FROM results_final.linear_no_change
 WHERE
 	LOWER(source_t1) LIKE '%nhd%'
 ;
+
